@@ -7,13 +7,13 @@ const postRoutes = require('./routes/postRoutes');
 const app = express();
 
 // CORS config for both local and production
+
+
 app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'https://react-social-app-frontend-steel.vercel.app/', // ✅ Replace this
-  ],
-  credentials: true,
+  origin: 'https://react-social-app-frontend-steel.vercel.app',
+  credentials: true, // only if you’re using cookies
 }));
+
 
 app.use(express.json());
 
